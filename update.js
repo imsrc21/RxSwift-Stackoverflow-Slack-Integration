@@ -39,7 +39,7 @@ function getJSON(target, success, error) {
 var QuestionURL = "https://api.stackexchange.com/2.2/questions?order=desc&sort=activity&tagged=rx-swift&site=stackoverflow";
 
 //run every 10 minutes
-cron.schedule('*/1 * * * *', function(){
+cron.schedule('*/10 * * * *', function(){
    console.log("cron running")
 
    lastTime = parseInt(fs.readFileSync('lastTime.txt', {"encoding":"utf8"}), 10);
